@@ -57,9 +57,6 @@ export const useShapesStore = create<UseShapesStoreProps>((set, store) => ({
     const { shapes } = store();
     const slicedShapes = [...shapes];
     slicedShapes[index] = attrs;
-
-    console.log("newShapes", slicedShapes);
-
     set({ shapes: slicedShapes });
   },
   setSelectedShape: (shape) => set({ selectedShape: shape }),

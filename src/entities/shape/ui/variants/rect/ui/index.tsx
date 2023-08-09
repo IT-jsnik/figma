@@ -18,8 +18,6 @@ export const CustomRect = ({
   const shapeRef = useRef<RectType>(null);
   const trRef = useRef<TransformerType>(null);
 
-  console.log(isSelected, props);
-
   useEffect(() => {
     if (!isSelected || !trRef.current || !shapeRef.current) return;
 
@@ -35,7 +33,6 @@ export const CustomRect = ({
         ref={shapeRef}
         draggable
         onDragEnd={(e) => {
-          console.log("dragEnd", e);
           onChange({
             ...props,
             x: e.target.x(),

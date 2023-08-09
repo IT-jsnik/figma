@@ -10,7 +10,6 @@ export const PixelGrid = ({ width, height, scale }: PixelGridProps) => {
   const gridSize = 1;
 
   const lines = [];
-  console.log("scale", scale);
 
   if (scale < 8) return;
 
@@ -21,7 +20,7 @@ export const PixelGrid = ({ width, height, scale }: PixelGridProps) => {
         stroke="#f5f5dc"
         strokeWidth={0.07}
         key={`h-line-${y}`}
-      />
+      />,
     );
   }
 
@@ -32,7 +31,7 @@ export const PixelGrid = ({ width, height, scale }: PixelGridProps) => {
         stroke="#f5f5dc"
         strokeWidth={0.07}
         key={`v-line-${x}`}
-      />
+      />,
     );
   }
 
